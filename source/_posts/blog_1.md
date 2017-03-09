@@ -3,7 +3,7 @@ title: Blog Gallery Demo
 date: 2017-02-05 21:11:06
 comments: false
 photos: 
- - /images/test3.jpg 
+ - /images/test4.jpg 
 tags: 
  - photos
  - demo
