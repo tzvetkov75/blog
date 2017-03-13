@@ -1,12 +1,12 @@
 layout: blog
-title: Security Training - Overview Markdown Elements
+title: Overview Markdown Elements
 date: 2017-02-10 22:03:05
 comments: false
 tags: 
  - secws
  - training
 categories: 
- - SecTraining 
+ - SecTrainingM 
 photos: 
  - /images/security.jpg 
 ---
@@ -90,7 +90,7 @@ add in the code
 [![Image idea](/demo_blog/public/images/test1.jpg)](/demo_blog/public/images/test1.jpg)
 ```
 
-[![Image idea](/pages/images/test1.jpg)](/pages/images/test1.jpg)
+[![Image idea](/images/test1.jpg)](/images/test1.jpg)
 
 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 
