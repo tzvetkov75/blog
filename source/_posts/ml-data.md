@@ -49,7 +49,7 @@ Small companies, supported by EU programs, can develop needed know how and provi
 
 What is our solution? Wait and you will see ;-)
 
-## List of interesting project:
+## List of interesting projects:
 
 - [MLSec Project](https://www.mlsecproject.org/) very nice talk on general problems of ML in security. 
 - [ML and security](http://fsecurify.com/machine-learning-and-cyber-security/) links list with ML in security
@@ -59,6 +59,7 @@ What is our solution? Wait and you will see ;-)
 - [Modern Honey Network](https://threatstream.github.io/mhn/) if you want to get you data form honeypot
 - [Honeypot project](https://www.honeynet.org/about) with valuable infos
 - [Machine Learning for Cyber Security](https://github.com/wtsxDev/Machine-Learning-for-Cyber-Security) List of resources
+- [List recourses ML and security](http://www.covert.io/) seems very promissing
 
 Companies (I have no relation to them :-):  
 
