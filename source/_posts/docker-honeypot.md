@@ -14,11 +14,11 @@ Honey pots are very import for the security and underestimated in the enterprise
 
 ## Importance of honey pots
 
-Assume the attacker scans 20 online host in the network, but 10 of them are honey pots. There is 50% of chance to be sensored assuming the simplified scenario. The more the honey pot is close to really to server and data the bigger the chance to attract an attacker.
+Assume a hacker scans and attacks 20 online host in the network, but 10 of them are honey pots. There is 50% of chance to be sensored in simplified scenario. The more a honey pot is close to real server, the bigger the chance to attract an attacker.
 
 ## Intranet is important
 
-Major part of the attacks are coming from insider, so intranet must also have honey post. Important for this is to be keeped as secret as possible.
+Major part of the attacks are coming from insider, so intranet must also have honey post. Important for this is to be keept as secret as possible.
 
 ## Poorly isolated honey pots lead to compromise of the hole network. 
 
@@ -29,17 +29,17 @@ They can be used as jump host to management, backup networks in hop by hop manne
 
 ## Isolated Docker for honey pot 
 
-Docker can run isolated in network and resources due to name-spaces in Linux. They are perfect match for using honey pots
+Docker can run isolated in network and resources due to name-spaces in Linux. They are perfect match for using honey pots.
 
 ## Setting network isolation 
 
 Every docker container is added default to bridged network, assume the following constellation. That is very classical.
 
-[![Network Poys](/images/blog/pots.png)](/images/blog/pots.png)
+[![Network Pots](/images/blog/pots.png)](/images/blog/pots.png)
 
 > you have multiple network spaces, routing tables and ip tables.
 
-Every docker container has its own iptable, v-interface, routing table. What is FORWARD for the global ip table, it is is INBOUND for the other etc.
+Every docker container has its own firewall(iptable), v-interfaces, routing table. What is FORWARD for the global ip table, it is is INBOUND for the other etc.
 
 ## Docker network 
 
@@ -57,7 +57,7 @@ docker network create --driver=bridge --subnet=172.17.0.0/16 \
 
 We need to add the following rules
 
-- __Forwarding__ DROP New connection from Pot to local networks 
+- __Forwarding__ DROP New connection from Pot container to local networks 
 
 ``` bash
  sudo /sbin/iptables -I FORWARD 1  -d 172.172.0.0/16,192.168.0.0/16 \
@@ -83,6 +83,6 @@ sudo /sbin/iptables -I OUTPUT 1  -d 172.172.0.0/16,192.168.0.0/16 \
 
 as first rule in the global output table
 
-
+__DONE__ with network part 
 
 ---
