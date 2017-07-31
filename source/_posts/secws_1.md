@@ -1,23 +1,21 @@
 layout: blog
-title: Security Training - Overview Markdown Elements
+title: Overview Markdown Elements
 date: 2017-02-10 22:03:05
 comments: false
 tags: 
  - secws
  - training
 categories: 
- - SecTraining 
+ - SecTrainingM 
 photos: 
  - /images/security.jpg 
 ---
-## Penetration Testing
+## Testing
 
-A penetration test, colloquially known as a pen test, is an authorised simulated attack on a computer system that looks for security weaknesses, potentially gaining access to the system's features and data.[1][2]
+Dolores eos qui ratione voluptatem sequi nesciunt. Lorem ipsum dolor.”Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 
-The process typically identifies the target systems and a particular goal—then reviews available information and undertakes various means to attain the goal. A penetration test target may be a white box (which provides background and system information) or black box (which provides only basic or no information except the company name). A penetration test can help determine whether a system is vulnerable to attack, if the defenses were sufficient, and which defenses (if any) the test defeated.[3]
-
+Dolores eos qui ratione voluptatem sequi nesciunt. Lorem ipsum dolor.”Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 <!-- more --> 
-
 ingle asterisks*
 _single underscores_
 **double asterisks**
@@ -90,7 +88,7 @@ add in the code
 [![Image idea](/demo_blog/public/images/test1.jpg)](/demo_blog/public/images/test1.jpg)
 ```
 
-[![Image idea](/pages/images/test1.jpg)](/pages/images/test1.jpg)
+[![Image idea](/images/test1.jpg)](/images/test1.jpg)
 
 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 
