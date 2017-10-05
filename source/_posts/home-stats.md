@@ -10,26 +10,26 @@ categories:
 photos:
  - /images/blog/domain_dump.jpg
 ---
-Getting some Internet content statistics from small network can be challenging task if limited resources are available. Here I propose extractiong TLS SNI extension and HTTP host header approach, where you do not introduce single point of failure, like DNS resolver or Web Proxies.
+Getting some Internet content statistics from small network can be challenging task with only limited resources. Here, I propose extracting [TLS SNI](https://en.wikipedia.org/wiki/Server_Name_Indication) extension and HTTP host header approach, where you do not introduce single point of failure, like DNS resolver or Web Proxies.
 <!-- more --> 
 
 ## Before you begin 
-There can be many reason why you need to know what are the accessed domains from the nodes:
-- smart devices, like TV, set top boxes, access frequent very “strange” sites
-- IoT devices, like smart lights, coffee machines etc. There are black boxes for the users.
-- software on computers  from semi trusted vendors
-- users browsing behavior
+There can be many reason why you need to know the accessed domains from the network nodes:
+- smart devices, like TV, set top boxes, access very “strange” sites
+- IoT devices, like smart lights, coffee machines etc. are black boxes for the users and behavior
+- semi trusted software on commuters
+- stats on users browsing behavior
 > You need to ask for consent of network users, since spying private communication is amoral and can be illegal in your country.
  
 ## How can be done
 There are multiple ways how can be done;
-- __DNS resolver log__ The advantage is this is very easy to achieve: every host needs to resolve the domain before accessing it. You can assign own reslover with extended los. Drawback is that resolving is cached at host and it is not sure how frequent the domain is accessed(DNS TTL). It can be 24h after resolution. Second disadvantage is that is can be single point if failures if the resolver fails.
-- __Extraction of TLS SNI and Host header__ You can mirror the port(s) on switch and extract on the fly TLS SNI extension and Host header. Advantage: it is not single point of failure (you loose only stats if the script stops) Disadvantage: you need a node to dump the traffic and mirror ports on switch. Alternatively you can run dump script on router. Furthermore, you can not see following request in the same domain at the same TLS session.
-- __Proxy__ (web washer) that interrupts the TLS session. This will give you most statistics – even exact URLs. The big disadvantage is its maintainance complexity. Proxy is bottle neck of internet access speed. Furthermore, it is again single point of failure and not all software support proxies. You need to know how you configure all IoT software for this.  
+- __DNS resolver log__ The advantage is this is very easy to achieve: hosts resolve the domain to IP before accessing it. You can assign own DNS reslover with extended log. Drawback is that resolving is cached at host and it is not clear how frequent the domain is accessed (DNS TTL). It can be 24h after the DNS resolve. Second, disadvantage is that is can be single point if failures if the resolver fails.
+- __Extraction of TLS SNI and Host header__ You can mirror the port(s) on switch and extract on-the-fly TLS SNI extension and Host header. Advantage: it is not single point of failure (you loose only stats if the script stops) Disadvantages: you need a node to dump the traffic and mirror ports on switch. Alternatively you can run dump script on router. Furthermore, you can not see following request in the same domain at the same TLS session.
+- __Proxy__ (web washer) that interrupts the TLS session (terminated and reestablished). This will give you most statistics – even exact URLs. The big disadvantage is its maintenance complexity. Proxy will be probably the bottle neck of internet access speed. Furthermore, it is again single point of failure and not all software support proxies. You need to know how you configure all IoT software for this.  
 
 ## Extracting SNI extension and Host header 
 
-Here I describe the second option, thus extracting the [SNI extension](https://en.wikipedia.org/wiki/Server_Name_Indication) from TLS handshake (ClientHello) and Host header from HTTP request. It not so popular as DNS but I found it very interesting. 
+Here I describe the second option, thus extracting the [SNI extension](https://en.wikipedia.org/wiki/Server_Name_Indication) from TLS handshake (ClientHello) and Host header from HTTP request. It not so popular as DNS resolver, but I found it very interesting. 
 
 You will need TCDPDUMP, TSHARK and BASH and AWK to used it. These are available  on all unix os. The script is extremity simple and you can find it on following link 
 
